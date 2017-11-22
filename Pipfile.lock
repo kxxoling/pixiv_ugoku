@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "4405b9545656c1ad2bb7df603c23c254184dbf4231e94048fb3fde44e2cb759c"
+            "sha256": "501a504178be6507cf5b523b01cf0f19ccdd84d50b44f42bf4a9edfe5c651227"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -86,6 +86,13 @@
             ],
             "markers": "sys_platform == 'darwin'",
             "version": "==0.1.0"
+        },
+        "bumpversion": {
+            "hashes": [
+                "sha256:6753d9ff3552013e2130f7bc03c1007e24473b4835952679653fb132367bdd57",
+                "sha256:6744c873dd7aafc24453d8b6a1a0d6d109faf63cd0cd19cb78fd46e74932c77e"
+            ],
+            "version": "==0.5.3"
         },
         "decorator": {
             "hashes": [
