@@ -15,4 +15,4 @@ TODO
 
 * webm support
 * gif support
-* Python 2.7 support
+* tox and tests

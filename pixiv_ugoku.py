@@ -26,8 +26,10 @@ def parse_html(html):
 
 
 def download_zip(url):
-    tmp_dir = os.path.join('/tmp', str(hash(url)))
-    os.mkdir(tmp_dir)
+    id_ = url.rsplit('/')[-1].rsplit('.')[0]
+    tmp_dir = os.path.join('/tmp', str(id_))
+    if not os.path.exists(tmp_dir):
+        os.mkdir(tmp_dir)
     tmp_file = tmp_dir + '.zip'
 
     with open(tmp_file, 'wb') as f:
@@ -50,7 +52,7 @@ def save_ugoku(url):
     ugoku_zip = ugoku_json['src']
     dirname = download_zip(ugoku_zip)
     fps = 1000 / 80
-    subprocess.run(
+    subprocess.check_call(
         'ffmpeg -i "{dirname}/%6d.jpg" -y {output}'.format(
             fps=fps, dirname=dirname, output='pixiv.mp4'
         ),
