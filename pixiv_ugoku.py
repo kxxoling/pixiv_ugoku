@@ -11,6 +11,8 @@ headers = {'Referer': 'https://www.pixiv.net/'}
 session = requests.Session()
 session.trust_env = True
 
+re_ugoku_illust_data = r'pixiv\.context\.ugokuIllustData\s+= ([^;]+)'
+
 
 def get_html(url):
     return session.get(url).content
@@ -18,7 +20,7 @@ def get_html(url):
 
 def parse_html(html):
     ugoku_data = re.search(
-        r'pixiv\.context\.ugokuIllustData\s+= ([^;]+)', html.decode('utf-8')
+        re_ugoku_illust_data, html.decode('utf-8')
     )
     assert ugoku_data
     ugoku_json = json.loads(ugoku_data.groups()[0])
