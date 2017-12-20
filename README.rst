@@ -8,11 +8,11 @@ Developed for macOS and Linux.
 Usage
 =====
 
-    ugoku [Pixiv_URL]
+    ugoku <Pixiv_URL>[ --filename <FILENAME>]
 
 TODO
 ====
 
 * webm support
 * gif support
-* tox and tests
+* tox

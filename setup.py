@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='pixiv_ugoku',
-    version='0.1.0',
+    version='0.1.1',
     include_package_data=True,
     zip_safe=False,
     entry_points={
