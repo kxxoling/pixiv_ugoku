@@ -9,10 +9,12 @@ ipython = "*"
 bumpversion = "*"
 pytest = ">=3"
 yapf = "*"
+pytest-mock = "*"
 
 [packages]
-requests = "*"
-fire = "*"
+requests = ">=2.5.0"
+fire = ">=0.1.2"
+six = ">=1.8"
 
 [requires]
 

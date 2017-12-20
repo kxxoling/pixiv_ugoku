@@ -14,6 +14,7 @@ setup(
     install_requires=[
         'requests >= 2.5.0, != 2.15, != 2.16',
         'fire>=0.1.2',
+        'six>=1.8',
     ],
     classifiers=[
         'Operating System :: MacOS :: MacOS X',

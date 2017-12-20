@@ -7,6 +7,7 @@ import subprocess
 from zipfile import ZipFile
 from tempfile import mkstemp, mkdtemp
 
+from six import text_type
 import requests
 
 headers = {'Referer': 'https://www.pixiv.net/'}
@@ -24,7 +25,7 @@ def get_html(url):
 
 def parse_html(html):
     ugoku_data = re.search(
-        re_ugoku_illust_data, html.decode('utf-8')
+        re_ugoku_illust_data, text_type(html)
     )
     assert ugoku_data
     logger.debug('Got data: ```%s```' % ugoku_data)

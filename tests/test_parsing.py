@@ -2,6 +2,8 @@ import os
 import re
 import json
 
+from six import text_type
+
 from pixiv_ugoku import re_ugoku_illust_data
 from pixiv_ugoku import parse_html
 
@@ -9,7 +11,7 @@ TESTS_PATH = os.path.dirname(os.path.abspath(__file__))
 
 pixiv_html_path = os.path.join(TESTS_PATH, 'data', 'pixiv_illust_47594886.html')
 with open(pixiv_html_path) as f:
-    fixture = f.read()
+    fixture = text_type(f.read())
 
 
 def test_re_ugoku_illust_data():
